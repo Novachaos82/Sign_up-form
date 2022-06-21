@@ -34,8 +34,6 @@ function check() {
 
   if (emailValue === "") {
     checkForError(email, "Email cannot be blank");
-  } else if (!checkEmailPattern(emailValue)) {
-    checkForError(email, "error");
   } else {
     checkForSuccess(email);
   }
@@ -49,10 +47,7 @@ function check() {
   if (passwordValue === "") {
     checkForError(password, "password cannot be blank");
   } else if (!checkPassPattern(passwordValue)) {
-    checkForError(
-      password,
-      "Password must contain minimum eight characters, at least one letter and one number"
-    );
+    checkForError(password, "Password must contain at least 8 characters");
   } else {
     checkForSuccess(password);
   }
@@ -64,7 +59,7 @@ function check() {
   } else if (!checkPassPattern(confirmPasswordValue)) {
     checkForError(
       confirmPassword,
-      "Password must contain minimum eight characters, at least one letter and one number"
+      "Password must contain at least 8 characters"
     );
   } else {
     checkForSuccess(confirmPassword);
@@ -114,12 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function checkPassPattern(input) {
   const re = RegExp("^(?=.*d).{8,}$");
-  console.log(re.test(input));
-  return re.test(input);
-}
-
-function checkEmailPattern(input) {
-  const re = RegExp("^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$");
   console.log(re.test(input));
   return re.test(input);
 }
