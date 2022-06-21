@@ -1,0 +1,224 @@
+:root {
+  --side-section-width: 35vw;
+  --main-section-width: 65vw;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Kalam:wght@300&family=Open+Sans:wght@300&family=Patrick+Hand&family=Roboto+Condensed&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  /*height: 100px;*/
+  line-height: 1.5;
+  background: #fff;
+  max-height: 100vh;
+  overflow: hidden;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  color: green;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #e74c3c;
+}
+
+img.main-image {
+  height: 100vh;
+  width: var(--side-section-width);
+  background-size: cover;
+}
+/*THE CONTAINER */
+.main-container {
+  position: relative;
+  display: flex;
+  /*gap: ;*/
+  max-height: 100vh;
+}
+
+/*left -section(the banner section of the page)*/
+.side-section {
+  padding: 0;
+  margin: 0;
+  width: var(--side-section-width);
+  height: 100vh;
+  position: relative;
+}
+
+.side-section .logo-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  top: 250px;
+  height: 150px;
+  font-family: "norse";
+  color: #fff;
+  font-size: 3rem;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  height: 150px;
+}
+
+.side-section > .author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  font-size: 18px;
+  bottom: 5px;
+  width: 100%;
+}
+
+.author a {
+  text-decoration: underline;
+  color: white;
+}
+/*RIGHT SECTION (the main section with forms)*/
+.main-section {
+  /*margin-top: 20vh;*/
+  background: #f9fafb;
+  padding: 50px 0px;
+  height: 100vh;
+  width: var(--main-section-width);
+}
+
+.main-section > .description {
+  /*padding: 60px 30px;*/
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  margin-top: 100px;
+  max-width: 40vw;
+}
+
+.form-container {
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+}
+
+.heading {
+  font-size: 1.25rem;
+  /*margin-left: 30px;*/
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  display: block;
+  /*margin-bottom: 0px;*/
+  margin-top: 5px;
+  line-height: 1;
+}
+
+.form-control {
+  display: flex;
+  gap: 20%;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.form-control input {
+  padding: 5px 10px;
+  width: 300px;
+  border: 1px solid #e5e7eb;
+  height: 30px;
+  border-radius: 3px;
+}
+
+span {
+  margin-top: 5px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  background: #596d48;
+  color: #fff;
+  margin-left: 40px;
+  padding: 15px 48px;
+  border: 1px solid #596d48;
+  border-radius: 7px;
+  box-shadow: 2px 5px 5px 4px rgb(0 0 0 / 10%);
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  transform: translateY(-5px);
+}
+
+.end {
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+/*relatd to icons and error which uses js*/
+.input-control {
+  position: relative;
+}
+
+.input-control small {
+  position: absolute;
+  display: block;
+  font-size: 14px;
+  color: red;
+  visibility: hidden;
+}
+
+.input-control i {
+  position: absolute;
+  top: 27px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.input-control.success input {
+  border-color: #2ecc71;
+}
+
+.input-control.success .fa-solid.fa-check {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.input-control.error input {
+  border-color: #e74c3c;
+}
+
+.input-control.error .fas.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.input-control.error small {
+  visibility: visible;
+}
