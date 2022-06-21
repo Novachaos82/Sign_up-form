@@ -1,4 +1,4 @@
-###Sign-up Form, TheOdinProject
+## Sign-up Form, TheOdinProject
 
 Used some Validation
 
